@@ -1,0 +1,13 @@
+lda 0002h;
+mov b,a;
+lda 0004h;
+mov c,a;
+lda 0006h;
+cmp b;
+jnc max;
+mov a,b;
+max:cmp c;
+jnc max1;
+mov a,c;
+max1:sta 0009h;
+hlt;
